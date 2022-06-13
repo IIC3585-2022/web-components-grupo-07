@@ -1,210 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <title>Native Todo</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Web Components Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="x-ua-compatible" content="IE=Edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-    <script src="./ToDoComponents/ToDo.js"></script>
-    <script src="./ToDoComponents/Item.js"></script>
-    <script src="./ToDoComponents/Input.js"></script>
+    <script src="./Components/ToDoComponents/ToDo.js"></script>
+    <script src="./Components/ToDoComponents/Item.js"></script>
+    <script src="./Components/ToDoComponents/Input.js"></script>
+    <script src="./Components/ItemComponents/ItemCard.js"></script>
+    <script src="./Components/Navegation/navbar.js" defer></script>
+  </head>
 
-</head>
-
-<body>
-    <ul id="header">
-        <li><a >To Do List</a></li>
-        <li><a >Item Market</a></li>
-      </ul>
+  <body>
+    <header>
+      <nav>
+        <ul id="header">
+          <li>
+            <a href="#">To Do List</a>
+            <i class="fas fa-chevron-down"></i>
+            <ul class="sub-menu">
+              <li><a href="ToDoVanilla.html">Vanilla </a></li>
+              <li><a href="#">Lit </a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Item Market</a>
+            <i class="fas fa-chevron-down"></i>
+            <ul class="sub-menu">
+              <li><a href="#">Vanilla </a></li>
+              <li><a href="#">Lit </a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <br />
+    <br />
+    <br />
 
     <my-todo></my-todo>
 
+    <br />
+    <br />
+
+    <item-card
+      img="./png/2006.jpg"
+      main="Balon Mundial 2006"
+      sub-one="$10.00"
+      button-color="orange"
+      button-text-color="black"
+    >
+      Button Text
+    </item-card>
+
     <style>
-        li {
-            display: inline;
-        }
+      :root {
+        --primary-color: rgb(27, 23, 37);
+        --secondary-color: rgb(101, 100, 102);
+      }
 
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #333;
-        }
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+      }
 
-        #header{
-            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
-            border-radius: 0px 0px 10px 10px;
-        }       
+      li {
+        float: left;
+      }
 
-        li {
-            float: left;
-            }
+      a {
+        text-decoration: none;
+        font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+        padding: 5px 2px 15px 25px;
+        color: white;
+        letter-spacing: 0.3px;
+      }
 
-        li a {
-            display: block;
-            color: white;
-            font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            }
+      li a:hover {
+        background-color: #111;
+      }
 
-        li a:hover {
-            background-color: #111;
-        }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
 
-        html,
-        body {
-            margin: 0;
-            padding: 0;
-        }
+      body {
+        font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+        line-height: 1.4em;
+        background: #c4ecc3;
+        color: #d9d9d9;
+        min-width: 230px;
+        max-width: 550px;
+        margin: 0 auto;
+        font-weight: 300;
+      }
 
-        body {
-            font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            line-height: 1.4em;
-            background: #c4ecc3;
-            color: #d9d9d9;
-            min-width: 230px;
-            max-width: 550px;
-            margin: 0 auto;
-            font-weight: 300;
-        }
+      h1 {
+        font-size: 100px;
+        font-weight: 100;
+        text-align: center;
+        color: hwb(249 4% 59% / 0.15);
+      }
 
-        h1 {
-            font-size: 100px;
-            font-weight: 100;
-            text-align: center;
-            color: hwb(249 4% 59% / 0.15);
-        }
+      section {
+        background: #fff;
+        margin: 30px 0 40px 0;
+        position: relative;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
+          0 25px 50px 0 rgba(0, 0, 0, 0.1);
+      }
 
-        section {
-            background: #fff;
-            margin: 30px 0 40px 0;
-            position: relative;
-            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
-            
-        }
+      #list-container {
+        margin: 0;
+        padding: 0;
 
-        #list-container {
-            margin: 0;
-            padding: 0;
-            
-            list-style: none;
+        list-style: none;
+      }
+      #new-todo-form {
+        position: relative;
+        font-size: 24px;
+        color: #111;
+      }
 
-        }
-        #new-todo-form {
-            position: relative;
-            font-size: 24px;
-            color : #111;
-            
-        
-        }
+      #new-todo {
+        padding: 16px 16px 16px 60px;
+        border: none;
+        background: #0784fa01;
+        position: relative;
+        margin: 0;
+        width: 100%;
+        font-size: 24px;
+        font-family: inherit;
+        font-weight: inherit;
+        line-height: 1.4em;
+        border: 0;
+        outline: none;
+        color: inherit;
+        padding: 6px;
+        box-shadow: inset 0 -1px 5px 0 rgba(0, 0, 0, 0.2);
+        box-sizing: border-box;
+      }
+      li.item {
+        font-size: 24px;
+        display: block;
+        position: relative;
+      }
 
-        #new-todo {
-            padding: 16px 16px 16px 60px;
-            border: none;
-            background: #0784fa01;
-            position: relative;
-            margin: 0;
-            width: 100%;
-            font-size: 24px;
-            font-family: inherit;
-            font-weight: inherit;
-            line-height: 1.4em;
-            border: 0;
-            outline: none;
-            color: inherit;
-            padding: 6px;
-            box-shadow: inset 0 -1px 5px 0 rgba(0, 0, 0, 0.2);
-            box-sizing: border-box; 
-           
-        }
-        li.item {
-            font-size: 24px;
-            display: block;
-            position: relative;
-            
-        }
+      li.item input {
+        text-align: center;
+        width: 40px;
+        /* auto, since non-WebKit browsers doesn't support input styling */
+        height: auto;
+        position: absolute;
+        top: 9px;
+        bottom: 0;
+        margin: auto 0;
+        border: none;
+        /* Mobile Safari */
+        -webkit-appearance: none;
+        appearance: none;
+      }
 
-        li.item input {
-            text-align: center;
-            width: 40px;
-            /* auto, since non-WebKit browsers doesn't support input styling */
-            height: auto;
-            position: absolute;
-            top: 9px;
-            bottom: 0;
-            margin: auto 0;
-            border: none;
-            /* Mobile Safari */
-            -webkit-appearance: none;
-            appearance: none;
-        }
+      li.item input:after {
+        content: url("./png/emptybox.png");
+      }
 
-        li.item input:after {
-            content: url("./png/emptybox.png");
-        }
+      li.item input:checked:after {
+        content: url("./png/checkbox.png");
+      }
 
-        li.item input:checked:after {
-            content: url("./png/checkbox.png")}
+      li.item label {
+        white-space: pre;
+        word-break: break-word;
+        padding: 15px 60px 5px 15px;
+        margin-left: 45px;
+        display: block;
+        line-height: 1.2;
+        transition: color 0.4s;
+      }
 
-        li.item label {
-            white-space: pre;
-            word-break: break-word;
-            padding: 15px 60px 5px 15px;
-            margin-left: 45px;
-            display: block;
-            line-height: 1.2;
-            transition: color 0.4s;
-        }
+      li.item.completed label {
+        color: #d9d9d9;
+        text-decoration: line-through;
+      }
 
-        li.item.completed label {
-            color: #d9d9d9;
-            text-decoration: line-through;
-        }
+      li.item button,
+      li.item input[type="checkbox"] {
+        outline: none;
+      }
 
-        li.item button,
-        li.item input[type="checkbox"] {
-            outline: none;
-        }
+      li.item button {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        background: none;
+        font-size: 100%;
+        vertical-align: baseline;
+        font-family: inherit;
+        font-weight: inherit;
+        color: inherit;
+        -webkit-appearance: none;
+        appearance: none;
+        -webkit-font-smoothing: antialiased;
+        -moz-font-smoothing: antialiased;
+      }
 
-        li.item button {
-            margin: 0;
-            padding: 0;
-            border: 0;
-            background: none;
-            font-size: 100%;
-            vertical-align: baseline;
-            font-family: inherit;
-            font-weight: inherit;
-            color: inherit;
-            -webkit-appearance: none;
-            appearance: none;
-            -webkit-font-smoothing: antialiased;
-            -moz-font-smoothing: antialiased;
-        }
+      li.item .destroy {
+        position: absolute;
+        top: 0;
+        right: 10px;
+        bottom: 0;
+        width: 40px;
+        height: 40px;
+        margin: auto 0;
+        font-size: 30px;
+        color: #cc9a9a;
+        margin-bottom: 11px;
+        transition: color 0.2s ease-out;
+      }
 
-        li.item .destroy {
-            position: absolute;
-            top: 0;
-            right: 10px;
-            bottom: 0;
-            width: 40px;
-            height: 40px;
-            margin: auto 0;
-            font-size: 30px;
-            color: #cc9a9a;
-            margin-bottom: 11px;
-            transition: color 0.2s ease-out;
-        }
+      li.item .destroy:hover {
+        color: #af5b5e;
+        content: url("./png/checkbox.png");
+      }
 
-        li.item .destroy:hover {
-            color: #af5b5e;
-            content: url("./png/checkbox.png")}
+      header nav ul .sub-menu {
+        position: absolute;
+        flex-direction: column;
+        justify-content: left;
+        align-items: start;
+        background: var(--secondary-color);
+        display: none;
+      }
+
+      header nav ul .sub-menu {
+        content: "";
+        position: absolute;
+      }
+
+      .fa-chevron-down {
+        cursor: pointer;
+      }
+
+      .fa-chevrons-down {
+        cursor: pointer;
+      }
+
+      header nav ul .sub-menu li {
+        padding: 10px;
+      }
     </style>
-</body>
-
+  </body>
 </html>
