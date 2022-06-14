@@ -72,11 +72,11 @@ templateItemCard = `
         background-color:  white;
         width: 13rem;
         top: 13rem;
-        left: 2rem;
+        left: 3rem;
         border-radius: .6rem;
         padding: .5rem 1rem;
         box-shadow: 0px 0px 8px rgba(1,1,1,.3);
-				height: 8.5rem;
+				height: 10rem;
 				box-shadow: 30px 30px 50px rgba(1,1,1,.3)
     }
 		.top-info-cont{

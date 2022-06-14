@@ -23,6 +23,7 @@ body {
   color: var(--dark-color);
   font-size: 18px;
   line-height: 1.5rem;
+  background-color: #61001f;
 }
 
 [hidden] {
@@ -49,8 +50,20 @@ nav {
 }
 
 header {
-  background: #61001f;
-  color: var(--base-color);
+  background: white;
+  color: #61001f;
+}
+
+.todomain {
+  max-width: 600px;
+  padding: 1rem;
+  margin: 0 auto;
+  grid-gap: 1rem;
+}
+
+.item-e {
+  grid-row: 1;
+  grid-column: 2;
 }
 
 main {
@@ -64,7 +77,6 @@ main {
 }
 .item-a {
   grid-row: 1;
-  grid-column: 2;
 }
 .item-b {
   grid-row: 2;
@@ -74,34 +86,6 @@ main {
 }
 .item-d {
   grid-row: 2;
-}
-img {
-  max-width: 100%;
-  max-height: 100%;
-}
-.logo {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 200px;
-  width: auto;
-}
-.copa {
-  position: fixed;
-  top: 0px;
-  right: 0px;
-  height: 200px;
-  width: auto;
-}
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: white;
-}
-li {
-  float: left;
 }
 
 a {
@@ -113,16 +97,13 @@ a {
   font-weight: bold;
 }
 
-li a:hover {
-  background-color: #afada6;
-}
 h1 {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-style: normal;
-  font-size: 20px;
+  font-size: 30px;
 
   text-align: center;
-  color: #afada6;
+  color: white;
   background: #61001f;
 }
 section {
