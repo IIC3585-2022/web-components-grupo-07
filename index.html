@@ -17,6 +17,7 @@
     <script src="./Components/ToDoComponents/Item.js"></script>
     <script src="./Components/ToDoComponents/Input.js"></script>
     <script src="./Components/ItemComponents/ItemCard.js"></script>
+    <script src="./Components/ItemComponents/green.js"></script>
     <script src="./Components/Navegation/navbar.js" defer></script>
   </head>
 
@@ -54,13 +55,17 @@
 
     <item-card
       img="./png/2006.jpg"
-      main="Balon Mundial 2006"
-      sub-one="$10.00"
-      button-color="orange"
+      main="Teamgeist"
+      subOne="$12.00"
+      buttonColor="green"
       button-text-color="black"
+      id="_12234"
     >
-      Button Text
+      Agregar al Carro
     </item-card>
+
+    <br />
+    <br />
 
     <style>
       :root {
@@ -82,7 +87,7 @@
 
       a {
         text-decoration: none;
-        font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
         padding: 5px 2px 15px 25px;
         color: white;
         letter-spacing: 0.3px;
@@ -99,7 +104,7 @@
       }
 
       body {
-        font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
         line-height: 1.4em;
         background: #c4ecc3;
         color: #d9d9d9;
@@ -117,7 +122,7 @@
       }
 
       section {
-        background: #fff;
+        background: #ffffff;
         margin: 30px 0 40px 0;
         position: relative;
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
@@ -176,11 +181,11 @@
       }
 
       li.item input:after {
-        content: url("./png/emptybox.png");
+        content: url('./png/emptybox.png');
       }
 
       li.item input:checked:after {
-        content: url("./png/checkbox.png");
+        content: url('./png/checkbox.png');
       }
 
       li.item label {
@@ -199,7 +204,7 @@
       }
 
       li.item button,
-      li.item input[type="checkbox"] {
+      li.item input[type='checkbox'] {
         outline: none;
       }
 
@@ -235,7 +240,7 @@
 
       li.item .destroy:hover {
         color: #af5b5e;
-        content: url("./png/checkbox.png");
+        content: url('./png/checkbox.png');
       }
 
       header nav ul .sub-menu {
@@ -248,7 +253,7 @@
       }
 
       header nav ul .sub-menu {
-        content: "";
+        content: '';
         position: absolute;
       }
 
