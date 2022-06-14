@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Todo</title>
+    <title>Qatar</title>
 
     <link rel="icon" type="image/png" href="./img/icons/favicon.png" />
 
@@ -17,11 +17,11 @@
     <meta name="mobile-web-app-status-bar-style" content="black" />
     <meta name="mobile-web-app-title" content="TutorialApp" />
 
-    <script src="./webcomponents/ToDoComponents/ToDo.js"></script>
-    <script src="./webcomponents/ToDoComponents/Item.js"></script>
-    <script src="./webcomponents/ToDoComponents/Input.js"></script>
-    <script src="./webcomponents/ItemComponents/ItemCard.js"></script>
-    <script src="./webcomponents/ItemComponents/green.js"></script>
+    <script src="./src/webcomponents/ToDoComponents/Item.js"></script>
+    <script src="./src/webcomponents/ToDoComponents/Input.js"></script>
+    <script src="./src/webcomponents/ToDoComponents/ToDo.js"></script>
+    <script src="./src/webcomponents/ItemComponents/ItemCard.js"></script>
+    <script src="./src/webcomponents/ItemComponents/green.js"></script>
 
     <script>
       if (!window.customElements) {
@@ -33,13 +33,91 @@
   </head>
 
   <body>
-    <header><h2>Todo app</h2></header>
+    <header><h2>Qatar ¡Allá Vamos!</h2></header>
 
-    <todo-view></todo-view>
+    <main>
+      <div class="item-a">
+        <my-todo titulo="Que Hacer en Qatar"></my-todo>
+      </div>
 
-    <div>
-      <my-todo titulo="Que Hacer en Qatar"></my-todo>
-    </div>
+      <div class="item-b">
+        <item-card
+          img="./src/img/Dulcesarabes.jpg"
+          main="Dulces árabes"
+          description="Catar es un destino famoso por su amplia variedad de dulces árabes de máxima calidad."
+          buttonColor="#00cc99"
+          buttonTextColor="white"
+          id="_12234"
+          buttonText="ر.ق21.15"
+        >
+        </item-card>
+      </div>
+
+      <div class="item-b">
+        <item-card
+          img="./src/img/Cafeterasdallah.jpg"
+          main="Cafeteras dallah"
+          description="Tradicional cafetera decorativa árabe de latón o plata utilizado en la antigua Catar para servir café qahwa."
+          buttonColor="#00cc99"
+          buttonTextColor="white"
+          id="_12234"
+          buttonText="422.96ر.ق"
+        >
+        </item-card>
+      </div>
+
+      <div class="item-b">
+        <item-card
+          img="./src/img/lamparas.jpg"
+          main="Lámparas árabes"
+          description="Lámparas árabes son objetos bellísimos que crean una atmósfera de ensueño en cualquier espacio."
+          buttonColor="#00cc99"
+          buttonTextColor="white"
+          id="_12234"
+          buttonText="ر.ق634.45"
+        >
+        </item-card>
+      </div>
+
+      <div class="item-c">
+        <item-card
+          img="./src/img/panuelos.jpg"
+          main="Pashmina"
+          description="Tejidos con lana de cachemir, aportan un toque de elegancia en una ocasión especial."
+          buttonColor="#00cc99"
+          buttonTextColor="white"
+          id="_12234"
+          buttonText="296.08ر.ق"
+        >
+        </item-card>
+      </div>
+
+      <div class="item-c">
+        <item-card
+          img="./src/img/Incienso.jpg"
+          main="Incienso"
+          description="Los encontrarás en Souq Waqif y Omani Souq, detrás del Mercado Central."
+          buttonColor="#00cc99"
+          buttonTextColor="white"
+          id="_12234"
+          buttonText="ر.ق424.5"
+        >
+        </item-card>
+      </div>
+
+      <div class="item-c">
+        <item-card
+          img="./src/img/TejidoAlSadu.jpg"
+          main="Tejido Al Sadu"
+          description="Con característicos diseños que simbolizan el legado cultural de Qatar y entorno desértico en el que habita."
+          buttonColor="#00cc99  "
+          buttonTextColor="white"
+          id="_12234"
+          buttonText="29.08ر.ق"
+        >
+        </item-card>
+      </div>
+    </main>
 
     <script src="./vendor/webcomponents-loader.js"></script>
   </body>
