@@ -8,28 +8,19 @@ class ItemCardComponent extends HTMLElement {
   }
 
   render() {
-    if (this.getAttribute('img'))
-      this.shadow.querySelector('img').src = this.getAttribute('img');
-    if (this.getAttribute('main'))
-      this.shadow.querySelector('img').alt =
-        this.getAttribute('main') + 'Image';
-    if (this.getAttribute('main'))
-      this.shadow.querySelector('.main-cont').querySelector('p').innerHTML =
-        this.getAttribute('main');
-    if (this.getAttribute('subOne'))
-      this.shadow.querySelector('.sub1-cont').querySelector('p').innerHTML =
-        this.getAttribute('subOne');
-    if (this.innerHTML)
-      this.shadow.querySelector('button').innerHTML = this.innerHTML;
-    if (this.getAttribute('buttonColor')) {
-      this.buttonColor = this.getAttribute('buttonColor');
-      if (this.getAttribute('buttonTextColor')) {
-        this.buttonTextColor = this.getAttribute('buttonTextColor');
-        this.shadow.querySelector(
-          'button'
-        ).style = `background-color: ${this.buttonColor}; color: ${this.buttonTextColor}`;
-      }
-    }
+    this.shadow.querySelector('img').src = this.getAttribute('img');
+    this.shadow.querySelector('img').alt = this.getAttribute('main') + 'Image';
+    this.shadow.querySelector('.main-cont').querySelector('p').innerHTML =
+      this.getAttribute('main');
+    this.shadow.querySelector('.sub1-cont').querySelector('p').innerHTML =
+      this.getAttribute('subOne');
+    this.buttonColor = this.getAttribute('buttonColor');
+    this.buttonTextColor = this.getAttribute('buttonTextColor');
+    this.shadow.querySelector(
+      'button'
+    ).style = `background-color: ${this.buttonColor}; color: ${this.buttonTextColor}`;
+    this.buttonText = this.getAttribute('buttonText');
+    this.shadow.querySelector('button').innerHTML = this.buttonText;
   }
 
   buttonClicked() {
@@ -73,7 +64,7 @@ templateItemCard = `
         background-color: ${this.buttonColor} ;
         font-weight: 300;
         font-size: .7rem;
-        color: ${this.buttonTextColor};
+				font-weight: bold;
     }
     img{
         width: 100%;
