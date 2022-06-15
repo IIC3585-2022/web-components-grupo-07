@@ -22,10 +22,14 @@
     <script src="./src/webcomponents/ToDoComponents/ToDo.js"></script>
     <script src="./src/webcomponents/ItemComponents/ItemCard.js"></script>
     <script src="./src/webcomponents/ItemComponents/green.js"></script>
+    <script
+      type="module"
+      src="./src/litcomponents/ItemComponent/ItemCard.js"
+    ></script>
 
     <script>
       if (!window.customElements) {
-        document.write('<!--');
+        document.write("<!--");
       }
     </script>
     <script src="./vendor/custom-elements-es5-adapter.js"></script>
@@ -40,7 +44,7 @@
         <my-todo titulo="Que Hacer en Qatar"></my-todo>
       </div>
 
-      <div class="item-b">
+      <!-- <div class="item-b">
         <item-card
           img="./src/img/Dulcesarabes.jpg"
           main="Dulces árabes"
@@ -51,6 +55,19 @@
           buttonText="ر.ق21.15"
         >
         </item-card>
+      </div> -->
+
+      <div class="item-b">
+        <item-lit-card
+          src="./src/img/Dulcesarabes.jpg"
+          alt="Dulces Arabes"
+          mainText="AAAAAAAA"
+          description="Catar es un destino famoso por su amplia variedad de dulces árabes de máxima calidad."
+          buttonColor="#00cc99"
+          buttonTextColor="white"
+          buttonText="ر.ق21.15"
+        >
+        </item-lit-card>
       </div>
 
       <div class="item-b">
