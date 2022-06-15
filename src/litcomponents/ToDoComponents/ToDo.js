@@ -1,6 +1,15 @@
 import { LitElement, html } from 'lit-element';
 
 export default class MyTodo extends LitElement {
+  static get properties() {
+    return {
+      title: { type: String },
+      item1: { type: String },
+      item2: { type: String },
+      item3: { type: String },
+      promt: { type: String },
+    };
+  }
   constructor() {
     super();
     this.list = [
@@ -10,6 +19,8 @@ export default class MyTodo extends LitElement {
     ];
     this.addItem = this.addItem.bind(this);
     this.removeItem = this.removeItem.bind(this);
+    this.title = '';
+    this.promt = '';
   }
 
   addItem(e, text) {
@@ -88,8 +99,11 @@ export default class MyTodo extends LitElement {
         }
       </style>
       <section id="lit-section">
-        <h1>Que Hacer en Qatar</h1>
-        <lit-input @submit="${(e) => this.addItem(e, e.detail)}"></lit-input>
+        <h1>${this.title}</h1>
+        <lit-input
+          promt=${this.promt}
+          @submit="${(e) => this.addItem(e, e.detail)}"
+        ></lit-input>
         ${this.list.map(
           (item, index) => html` <lit-item
             .text=${item.text}

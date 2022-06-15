@@ -125,4 +125,4 @@ templateItemCard = `
     </div>        
 `;
 
-window.customElements.define('item-card', ItemCardComponent);
+customElements.define('item-card', ItemCardComponent);
