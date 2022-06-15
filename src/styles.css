@@ -106,3 +106,23 @@ h1 {
   color: white;
   background: #61001f;
 }
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.logo {
+  position: absolute;
+  top: 110px;
+  left: 10px;
+  height: 200px;
+  width: auto;
+}
+
+.copa {
+  position: absolute;
+  top: 110px;
+  right: 10px;
+  height: 200px;
+  width: auto;
+}
