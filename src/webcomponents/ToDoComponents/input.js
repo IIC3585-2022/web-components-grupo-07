@@ -1,4 +1,5 @@
 const templateTodoInput = document.createElement('template');
+
 templateTodoInput.innerHTML = `
     <style>
     .input {
@@ -69,13 +70,6 @@ templateTodoInput.innerHTML = `
         box-shadow: inset 0 -1px 5px 0 rgba(0, 0, 0, 0.2);
         box-sizing: border-box;
       }
-      
-
-  
-    
-
-    
-
     </style>
     <form id="new-todo-form">
         <input id="new-todo"  maxlength="120" type="text" placeholder="En Qatar Quiero:">

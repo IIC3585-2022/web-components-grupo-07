@@ -72,7 +72,7 @@ main {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 400px 400px 400px;
-  grid-template-rows: 400px 400px 400px;
+  grid-template-rows: 400px 400px;
   grid-gap: 1rem;
 }
 .item-a {
@@ -125,4 +125,8 @@ img {
   right: 10px;
   height: 200px;
   width: auto;
+}
+
+#lit-todo {
+  background: white;
 }
