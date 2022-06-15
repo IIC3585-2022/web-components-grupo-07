@@ -3,14 +3,14 @@
 }
 
 button:hover {
-  background: #00b386;
+  background: #1183ca;
   cursor: pointer;
 }
 button {
-  background: #00cc99;
+  background: #389bd9;
   border: none;
   border-radius: 3px;
-  color: #fdfdfd;
+  color: white;
   outline: none;
   padding: 0.75rem;
   vertical-align: middle;
