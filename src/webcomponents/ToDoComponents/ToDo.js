@@ -31,14 +31,6 @@ class MyTodo extends HTMLElement {
     this._render();
   }
 
-  toggleItem(e) {
-    const item = this._list[e.detail];
-    this._list[e.detail] = Object.assign({}, item, {
-      checked: !item.checked,
-    });
-    this._render();
-  }
-
   disconnectedCallback() {}
 
   _render() {
@@ -51,7 +43,6 @@ class MyTodo extends HTMLElement {
       $item.checked = item.checked;
       $item.index = index;
       $item.addEventListener('onRemove', this.removeItem.bind(this));
-      $item.addEventListener('onToggle', this.toggleItem.bind(this));
       this.$listContainer.appendChild($item);
     });
   }
@@ -121,7 +112,6 @@ templateTodo.innerHTML = `
       padding: 10px;
     }
     
-    
   </style>
   <section>
       <h1></h1>
@@ -130,4 +120,4 @@ templateTodo.innerHTML = `
   </section>
 `;
 
-window.customElements.define('my-todo', MyTodo);
+customElements.define('my-todo', MyTodo);

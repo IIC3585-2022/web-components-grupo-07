@@ -93,10 +93,6 @@ templateTodoItem.innerHTML = `
       line-height: 1.2;
       transition: color 0.4s;
     }
-    li.item.completed label {
-      color: #d9d9d9;
-      text-decoration: line-through;
-    }
     li.item button {
       margin: 0;
       padding: 0;
@@ -127,12 +123,8 @@ templateTodoItem.innerHTML = `
     }
     li.item .destroy:hover {
       color: #af5b5e;
-      content: url('./png/checkbox.png');
     }
     
-    
-
-  
   </style>
 
     <li class="item">
@@ -141,4 +133,4 @@ templateTodoItem.innerHTML = `
     </li>
 `;
 
-window.customElements.define('todo-item', TodoItem);
+customElements.define('todo-item', TodoItem);

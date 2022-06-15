@@ -15,10 +15,11 @@ class ItemCardComponent extends HTMLElement {
     this.shadow.querySelector('.description').querySelector('p').innerHTML =
       this.getAttribute('description');
     this.buttonColor = this.getAttribute('buttonColor');
-    this.buttonTextColor = this.getAttribute('button  TextColor');
+    this.buttonTextColor = this.getAttribute('buttonTextColor');
     this.shadow.querySelector(
       'button'
     ).style = `background-color: ${this.buttonColor}; color: ${this.buttonTextColor}`;
+
     this.buttonText = this.getAttribute('buttonText');
     this.shadow.querySelector('button').innerHTML = this.buttonText;
   }
@@ -41,6 +42,7 @@ templateItemCard = `
         border-radius: .5rem;
         border: none;
         background-color: ${this.buttonColor} ;
+
         font-weight: 300;
         font-size: .7rem;
 				font-weight: bold;

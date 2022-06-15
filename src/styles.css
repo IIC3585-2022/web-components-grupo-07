@@ -2,6 +2,24 @@
   box-sizing: border-box;
 }
 
+button:hover {
+  background: #00b386;
+  cursor: pointer;
+}
+button {
+  background: #00cc99;
+  border: none;
+  border-radius: 3px;
+  color: #fdfdfd;
+  outline: none;
+  padding: 0.75rem;
+  vertical-align: middle;
+
+  font-weight: 300;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
 html {
   --base-color: #fff;
   --dark-color: #2a3443;
@@ -72,7 +90,7 @@ main {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 400px 400px 400px;
-  grid-template-rows: 400px 400px 400px;
+  grid-template-rows: 400px 400px;
   grid-gap: 1rem;
 }
 .item-a {
@@ -113,7 +131,7 @@ img {
 
 .logo {
   position: absolute;
-  top: 110px;
+  top: 130px;
   left: 10px;
   height: 200px;
   width: auto;
@@ -121,8 +139,12 @@ img {
 
 .copa {
   position: absolute;
-  top: 110px;
+  top: 120px;
   right: 10px;
   height: 200px;
   width: auto;
+}
+
+#lit-todo {
+  background: white;
 }

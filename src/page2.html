@@ -4,35 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Qatar</title>
+    <title>Qatar Lit</title>
 
     <script>
       if (!window.customElements) {
         document.write('<!--');
       }
     </script>
-
-    <script type="text/javascript" src="./src/navbar/navbar.js"></script>
     <script src="./vendor/custom-elements-es5-adapter.js"></script>
   </head>
 
   <body>
     <header>
       <h2>
-        Qatar ¡Allá Vamos!
-        <button onclick="WebComponentView();">Web Component</button>
-        <button onclick="LitView();">Lit</button>
+        Qatar ¡Allá Vamos! Lit
+        <form method="get" action="/page2.html">
+          <button type="submit">Continue</button>
+        </form>
+        <form method="get" action="./">
+          <button type="submit">Continue</button>
+        </form>
+        <button onclick="location.href='./src/page2.html'">Button</button>
+        <button onclick="location.href='../'">Button</button>
       </h2>
     </header>
 
-    <div class="logo">
+    <!--<div class="logo">
       <img src="./src/img/logo.png" />
-    </div>
+    </div>-->
 
     <div class="copa">
       <img src="./src/img/copa.png" />
     </div>
-    <div id="Show"></div>
+
+    <div class="todomain">
+      <lit-todo></lit-todo>
+      <!-- <my-todo titulo="Que Hacer en Qatar"></my-todo> -->
+    </div>
+
+    <h1>Que Comprar en Qatar LiT</h1>
 
     <script src="./vendor/webcomponents-loader.js"></script>
   </body>
