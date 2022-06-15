@@ -89,7 +89,7 @@ class TodoInput extends LitElement {
           id="new-todo"
           maxlength="120"
           type="text"
-          placeholder="v2 En Qatar Quiero:"
+          placeholder="En Qatar Quiero:"
         />
         <button class="button" type="submit">Add</button>
       </form>
@@ -97,4 +97,4 @@ class TodoInput extends LitElement {
   }
 }
 
-window.customElements.define('lit-input', TodoInput);
+customElements.define('lit-input', TodoInput);

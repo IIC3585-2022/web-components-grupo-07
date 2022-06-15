@@ -102,4 +102,4 @@ class TodoInput extends HTMLElement {
   disconnectedCallback() {}
 }
 
-window.customElements.define('todo-input', TodoInput);
+customElements.define('todo-input', TodoInput);

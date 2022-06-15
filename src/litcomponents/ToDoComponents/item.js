@@ -104,5 +104,4 @@ export default class TodoItem extends LitElement {
     `;
   }
 }
-
-window.customElements.define('lit-item', TodoItem);
+customElements.define('lit-item', TodoItem);

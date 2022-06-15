@@ -120,4 +120,4 @@ templateTodo.innerHTML = `
   </section>
 `;
 
-window.customElements.define('my-todo', MyTodo);
+customElements.define('my-todo', MyTodo);

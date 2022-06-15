@@ -102,4 +102,4 @@ export default class MyTodo extends LitElement {
   }
 }
 
-window.customElements.define('lit-todo', MyTodo);
+customElements.define('lit-todo', MyTodo);

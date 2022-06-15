@@ -133,4 +133,4 @@ templateTodoItem.innerHTML = `
     </li>
 `;
 
-window.customElements.define('todo-item', TodoItem);
+customElements.define('todo-item', TodoItem);
