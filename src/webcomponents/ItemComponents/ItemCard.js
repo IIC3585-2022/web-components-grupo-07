@@ -42,7 +42,6 @@ templateItemCard = `
         border-radius: .5rem;
         border: none;
         background-color: ${this.buttonColor} ;
-
         font-weight: 300;
         font-size: .7rem;
 				font-weight: bold;
