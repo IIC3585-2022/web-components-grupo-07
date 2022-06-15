@@ -1,9 +1,16 @@
 import { LitElement, html } from 'lit-element';
 
 class TodoInput extends LitElement {
+  static get properties() {
+    return {
+      promt: { type: String },
+    };
+  }
+
   constructor() {
     super();
     this.onSubmit = this.onSubmit.bind(this);
+    this.promt = '';
   }
 
   onSubmit(e) {
@@ -89,7 +96,7 @@ class TodoInput extends LitElement {
           id="new-todo"
           maxlength="120"
           type="text"
-          placeholder="En Qatar Quiero:"
+          placeholder=${this.promt}
         />
         <button class="button" type="submit">Add</button>
       </form>

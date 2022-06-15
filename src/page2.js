@@ -3,7 +3,6 @@ import './styles.css';
 import './litcomponents/ToDoComponents/item.js';
 import './litcomponents/ToDoComponents/input.js';
 import './litcomponents/ToDoComponents/ToDo.js';
-import './litcomponents/ItemComponents/ItemCard.js';
 
 import './webcomponents/ToDoComponents/item.js';
 import './webcomponents/ToDoComponents/ToDo.js';
